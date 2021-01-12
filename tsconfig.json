@@ -1,6 +1,5 @@
 {
   // 配置详细地址 https://www.typescriptlang.org/docs/handbook/compiler-options.html
-  // 解析配置选项
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -33,9 +32,13 @@
     // 不要发出输出
     "noEmit": true,
     // JSX解析模式
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
-  // 指定一个匹配列表（属于自动指定该路径下的所有ts相关文件）
   "include": [
     "src"
   ]
